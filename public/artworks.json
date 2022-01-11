@@ -1,0 +1,102 @@
+[
+  {
+    "creatorName": "Leo Penry",
+    "creatorId": "leopenry",
+    "location": "USA",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    "creationsNum": "",
+    "collectionNum": "0",
+    "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+    "creations": [
+      {
+        "id": "0",
+        "img": "https://randomuser.me/api/portraits/men/22.jpg",
+        "title": "Paradox",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "Hakar",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/3.jpg",
+        "priceTez": 15,
+        "priceUsd": 187,
+        "edition": 1,
+        "editions": 2,
+        "collection": "My Collection"
+      },
+      {
+        "id": "1",
+        "img": "https://randomuser.me/api/portraits/men/4.jpg",
+        "title": "Pop",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "Hakar",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/3.jpg",
+        "priceTez": 2,
+        "priceUsd": 12,
+        "edition": 1,
+        "editions": 1,
+        "collection": "My Collection"
+      },
+      {
+        "id": "2",
+        "img": "https://randomuser.me/api/portraits/men/8.jpg",
+        "title": "Maistro",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "Hakar",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/3.jpg",
+        "priceTez": 8,
+        "priceUsd": 66,
+        "edition": 1,
+        "editions": 4,
+        "collection": "My Collection"
+      }
+    ]
+  },
+  {
+    "creatorName": "Lorenz",
+    "creatorId": "lorenz2010",
+    "location": "Brazil",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    "creationsNum": "4",
+    "collectionNum": "0",
+    "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
+    "creations": [
+      {
+        "id": "3",
+        "img": "https://randomuser.me/api/portraits/men/12.jpg",
+        "title": "Space",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "Hakar",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/6.jpg",
+        "priceTez": 50,
+        "priceUsd": 400,
+        "edition": 1,
+        "editions": 2,
+        "collection": "My Collection"
+      },
+      {
+        "id": "4",
+        "img": "https://randomuser.me/api/portraits/men/11.jpg",
+        "title": "Rain",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "Hakar",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/3.jpg",
+        "priceTez": 8,
+        "priceUsd": 65,
+        "edition": 1,
+        "editions": 1,
+        "collection": "My Collection"
+      },
+      {
+        "id": "5",
+        "img": "https://randomuser.me/api/portraits/men/14.jpg",
+        "title": "BOOM",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "Hakar",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/3.jpg",
+        "priceTez": 8,
+        "priceUsd": 168,
+        "edition": 1,
+        "editions": 5,
+        "collection": "My Collection"
+      }
+    ]
+  }
+]
