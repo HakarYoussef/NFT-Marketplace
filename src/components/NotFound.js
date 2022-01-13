@@ -1,10 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import NotFoundImg from './Images/404.svg';
+import { NotFoundWrapper } from './styles/NotFound.style';
 
 function NotFound() {
   return (
-    <div>
-      <h1>Not Found</h1>
-    </div>
+    <NotFoundWrapper>
+      <img src={NotFoundImg} alt="" />
+      <h3>Something went WRONG!</h3>
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <p>Back to Home Page</p>
+      </Link>
+    </NotFoundWrapper>
   );
 }
 

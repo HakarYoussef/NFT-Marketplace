@@ -3,14 +3,18 @@ import {
   UserPageImagesContainer,
   UserPageImageWrapper,
 } from './styles/UserPage.style';
+import CardMedia from '@mui/material/CardMedia';
+import { Tabs, Tab, Box } from '@mui/material';
 
 function UserPageImages({ img }) {
   return (
-    <UserPageImagesContainer>
-      <UserPageImageWrapper>
-        <img src={img} alt="" />
-      </UserPageImageWrapper>
-    </UserPageImagesContainer>
+    <>
+      <UserPageImagesContainer>
+        <UserPageImageWrapper>
+          <CardMedia height="300" component="img" src={img} />
+        </UserPageImageWrapper>
+      </UserPageImagesContainer>
+    </>
   );
 }
 

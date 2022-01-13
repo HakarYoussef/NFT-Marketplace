@@ -39,11 +39,12 @@ const SingleEditionCard = ({
       <SingleCardStyles>
         <CardMedia height="400" component="img" src={img} />
         <h3>{title}</h3>
+
         <FirstBlock>
           <CardPrice>
             <p>Price</p>
             <p>
-              ꜩ{priceTez} / ${priceUsd}{' '}
+              ꜩ{priceTez} / ${priceUsd}
             </p>
           </CardPrice>
           <CardEdition>

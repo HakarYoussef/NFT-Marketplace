@@ -2,8 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router';
 import { loadArts } from './actions/artAction';
+import LoadingSpinner from './LoadingSpinner';
+import {
+  UserPageImgContainer,
+  UserPageWrapperStyle,
+} from './styles/UserPage.style';
 import UserPage from './UserPage';
 import UserPageImages from './UserPageImages';
+import UserProfileTabs from './UserProfileTabs';
+import CollectedArts from './CollectedArts';
+import { Link } from 'react-router-dom';
 
 const UserPageWrapper = (props) => {
   const [artworks, setArtworks] = useState(props.artworks);
@@ -18,35 +26,47 @@ const UserPageWrapper = (props) => {
 
   useEffect(() => {
     if (props.artworks.length > 0) {
-      setArtworks(props.artworks);
-      setIsLoading(false);
+      setTimeout(() => {
+        setArtworks(props.artworks);
+        setIsLoading(false);
+      }, 2000);
     }
   }, [props.artworks]);
 
   return (
     <>
       {isLoading ? (
-        <div>Loading...</div>
+        <LoadingSpinner />
       ) : (
         artworks &&
         artworks
           .filter((art) => art.creatorId === name)
 
           .map((art) => (
-            <div key={art.id}>
+            <UserPageWrapperStyle key={art.id}>
               <UserPage
                 avatar={art.avatar}
                 creatorName={art.creatorName}
+                creatorId={art.creatorId}
                 location={art.location}
                 collectionNum={art.collectionNum}
                 creationsNum={art.creations.length}
                 bio={art.bio}
               />
-              {art.creations.map((item) => {
-                return <UserPageImages img={item.img} />;
-              })}
-              <UserPageImages />
-            </div>
+              <UserProfileTabs
+                created={
+                  <UserPageImgContainer>
+                    {art.creations.slice(0, 4).map((item) => {
+                      return <UserPageImages key={item.id} img={item.img} />;
+                    })}
+                  </UserPageImgContainer>
+                }
+                collected={<CollectedArts />}
+              />
+              <Link to={`/${art.creatorId}/marketplace`}>
+                See more from @{art.creatorId}
+              </Link>
+            </UserPageWrapperStyle>
           ))
       )}
     </>

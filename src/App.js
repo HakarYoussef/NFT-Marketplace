@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import ArtDetail from './components/ArtDetail';
 import UserPageWrapper from './components/UserPageWrapper';
 import NotFound from './components/NotFound';
+import IndividualMarketWrapper from './components/IndividualMarketWrapper';
 
 const theme = {
   colors: {
@@ -20,6 +21,7 @@ const theme = {
     footer: '#bbb',
     input: '#F1F1F2',
     text: '#5a6868',
+    skeleton: '#e2e5e7',
   },
   fontSize: '1rem',
   fontSizeSmall: '14px',
@@ -43,6 +45,10 @@ function App() {
         <Route path="login" element={<LoginPage />} />
         <Route path=":id" element={<ArtDetail />} />
         <Route path="/user/:name" element={<UserPageWrapper />} />
+        <Route
+          path="/:name/marketplace"
+          element={<IndividualMarketWrapper />}
+        />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </ThemeProvider>

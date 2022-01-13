@@ -18,8 +18,10 @@ const Home = (props) => {
 
   useEffect(() => {
     if (props.artworks.length > 0) {
-      setArtworks(props.artworks);
-      setIsLoading(false);
+      setTimeout(() => {
+        setArtworks(props.artworks);
+        setIsLoading(false);
+      }, [2000]);
     }
   }, [props.artworks]);
 

@@ -46,6 +46,32 @@
         "edition": 1,
         "editions": 4,
         "collection": "My Collection"
+      },
+      {
+        "id": "6",
+        "img": "https://randomuser.me/api/portraits/men/77.jpg",
+        "title": "Bell",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "Hakar",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/3.jpg",
+        "priceTez": 16,
+        "priceUsd": 87,
+        "edition": 1,
+        "editions": 1,
+        "collection": "My Collection"
+      },
+      {
+        "id": "7",
+        "img": "https://randomuser.me/api/portraits/men/33.jpg",
+        "title": "Maistro",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "Hakar",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/3.jpg",
+        "priceTez": 2,
+        "priceUsd": 12,
+        "edition": 1,
+        "editions": 10,
+        "collection": "My Collection"
       }
     ]
   },

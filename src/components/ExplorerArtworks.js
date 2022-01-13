@@ -30,17 +30,21 @@ const ExplorerArtworks = (props) => {
 
   useEffect(() => {
     if (props.artworks.length > 0) {
-      setArtworks(props.artworks);
-      setIsLoading(false);
+      setTimeout(() => {
+        setArtworks(props.artworks);
+        setIsLoading(false);
+      }, 2000);
     }
   }, [props.artworks]);
 
   function onSearchText(text, props) {
     let filtered;
     if (text) {
-      filtered = props.artworks.filter((arts) =>
-        arts.creatorId.toLowerCase().includes(text.toLowerCase())
+      filtered = props.artworks.filter((art) =>
+        art.creations.some((creation) => creation.title === text)
       );
+      // .toLowerCase()
+      // .includes(text.toLowerCase());
     } else {
       filtered = props.artworks;
     }

@@ -4,13 +4,26 @@ import { AiOutlineInstagram } from 'react-icons/ai';
 import { FiTwitter } from 'react-icons/fi';
 import { RiGlobalLine } from 'react-icons/ri';
 
-export const UserProfileWrapper = styled.div`
+export const UserPageWrapperStyle = styled.div`
   display: flex;
-  margin: 60px;
+  flex-direction: row;
+  margin: 75px;
+`;
+
+export const UserPageImgContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+  /* margin-left: 50px; */
+`;
+
+export const UserProfileWrapper = styled.div`
+  height: 100vh;
 `;
 
 export const UserLeftSide = styled.div`
-  margin-left: 125px;
+  margin-left: 175px;
 `;
 
 export const UserDetails = styled.div``;
@@ -24,7 +37,6 @@ export const UserWrapper = styled.div`
 `;
 
 export const UserNameWrapper = styled.div`
-  /* margin-left: 40px; */
   h1 {
     font-family: 'Fugaz One', cursive;
     font-size: 3rem;
@@ -92,3 +104,20 @@ export const BioWrapper = styled.div`
 
 export const UserPageImagesContainer = styled.div``;
 export const UserPageImageWrapper = styled.div``;
+
+export const CollectedArtsWrapper = styled.div`
+  p {
+    color: ${({ theme }) => theme.colors.text};
+  }
+`;
+export const IndiviualMarketStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 35px;
+  margin-top: 40px;
+  margin-left: 45px;
+  column-gap: 35px;
+  justify-content: flex-start;
+  max-width: 100%;
+`;

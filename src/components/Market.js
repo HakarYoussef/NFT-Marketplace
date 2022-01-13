@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import SingleEditionCard from './SingleEditionCard';
 import MultipleCard from './MultipleEditionCard';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
 import './styles/Pagination.css';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import SkeletonCard from './skeletons/skeleton components/SkeletonCard';
 
 const Market = ({ artworks, isLoading }) => {
   const [pageNumber, setPageNumber] = useState(0);
@@ -19,26 +20,51 @@ const Market = ({ artworks, isLoading }) => {
         <>
           {art.creations.map((item) => {
             return (
-              <Link
-                to={`/${item.id}`}
-                style={{
-                  cursor: 'default',
-                  textDecoration: 'none',
-                  color: 'inherit',
-                }}
-              >
-                <SingleEditionCard
-                  key={item.id}
-                  creatorId={art.creatorId}
-                  title={item.title}
-                  priceTez={item.priceTez}
-                  priceUsd={item.priceUsd}
-                  avatar={art.avatar}
-                  img={item.img}
-                  edition={item.edition}
-                  editions={item.editions}
-                />
-              </Link>
+              <div>
+                {item.editions > 1 ? (
+                  <Link
+                    to={`/${item.id}`}
+                    style={{
+                      cursor: 'default',
+                      textDecoration: 'none',
+                      color: 'inherit',
+                    }}
+                  >
+                    <MultipleCard
+                      key={item.id}
+                      creatorId={art.creatorId}
+                      title={item.title}
+                      priceTez={item.priceTez}
+                      priceUsd={item.priceUsd}
+                      avatar={art.avatar}
+                      img={item.img}
+                      edition={item.edition}
+                      editions={item.editions}
+                    />
+                  </Link>
+                ) : (
+                  <Link
+                    to={`/${item.id}`}
+                    style={{
+                      cursor: 'default',
+                      textDecoration: 'none',
+                      color: 'inherit',
+                    }}
+                  >
+                    <SingleEditionCard
+                      key={item.id}
+                      creatorId={art.creatorId}
+                      title={item.title}
+                      priceTez={item.priceTez}
+                      priceUsd={item.priceUsd}
+                      avatar={art.avatar}
+                      img={item.img}
+                      edition={item.edition}
+                      editions={item.editions}
+                    />
+                  </Link>
+                )}
+              </div>
             );
           })}
         </>
@@ -54,7 +80,7 @@ const Market = ({ artworks, isLoading }) => {
   return (
     <>
       {isLoading ? (
-        <p>Loading...</p>
+        [1, 2, 3, 4, 5, 6].map((n) => <SkeletonCard key={n} />)
       ) : (
         <React.Fragment>
           {displayArtworks}
