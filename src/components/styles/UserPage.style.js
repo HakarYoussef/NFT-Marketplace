@@ -9,6 +9,21 @@ export const UserPageWrapperStyle = styled.div`
   flex-direction: row;
   margin: 75px;
 `;
+export const UserPageSeeMore = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 75px;
+  color: ${(props) => props.theme.text};
+  p {
+    margin-left: 10px;
+    color: ${(props) => props.theme.primary};
+    font-weight: 700;
+  }
+`;
+export const UserRightSide = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const UserPageImgContainer = styled.div`
   display: flex;
@@ -24,6 +39,7 @@ export const UserProfileWrapper = styled.div`
 
 export const UserLeftSide = styled.div`
   margin-left: 175px;
+  color: ${(props) => props.theme.text};
 `;
 
 export const UserDetails = styled.div``;
@@ -38,6 +54,7 @@ export const UserWrapper = styled.div`
 
 export const UserNameWrapper = styled.div`
   h1 {
+    color: ${(props) => props.theme.text};
     font-family: 'Fugaz One', cursive;
     font-size: 3rem;
   }
@@ -62,9 +79,10 @@ export const Collections = styled.div`
   h1 {
     font-family: 'Fugaz One', cursive;
     font-size: 1.8rem;
+    color: ${(props) => props.theme.text};
   }
   p {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
 `;
 
@@ -73,9 +91,10 @@ export const Creations = styled.div`
   h1 {
     font-family: 'Fugaz One', cursive;
     font-size: 1.8rem;
+    color: ${(props) => props.theme.text};
   }
   p {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
 `;
 
@@ -86,32 +105,41 @@ export const SocialLinkWrapper = styled.div`
 
 export const InstaIcon = styled(AiOutlineInstagram)`
   font-size: 20px;
+  color: ${(props) => props.theme.text};
 `;
 
 export const GlobalIcon = styled(RiGlobalLine)`
   font-size: 20px;
+  color: ${(props) => props.theme.text};
 `;
 
 export const TwitterIcon = styled(FiTwitter)`
   margin: 0 20px;
   font-size: 20px;
+  color: ${(props) => props.theme.text};
 `;
 
 export const BioWrapper = styled.div`
   margin-top: 40px;
   width: 350px;
+  color: ${(props) => props.theme.text};
 `;
 
 export const UserPageImagesContainer = styled.div``;
-export const UserPageImageWrapper = styled.div``;
+export const UserPageImageWrapper = styled.div`
+  width: 100% !important;
+  height: 90% !important;
+  max-width: 300px !important;
+  max-height: 300px !important;
+`;
 
 export const CollectedArtsWrapper = styled.div`
   p {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
 `;
 export const IndiviualMarketStyles = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   flex-wrap: wrap;
   row-gap: 35px;

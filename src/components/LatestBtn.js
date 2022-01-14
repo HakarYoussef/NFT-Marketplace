@@ -4,6 +4,7 @@ import LatestDropDown from './LatestDropDown';
 import { LatestBtnStyles } from './styles/Explorer.style';
 import { LatestIconDown } from './styles/Explorer.style';
 import Select from 'react-select';
+import { StyledReactSelect } from './styles/Explorer.style';
 
 function LatestBtn({ handleSort, sortOrder }) {
   const [open, setOpen] = useState(false);
@@ -66,8 +67,8 @@ function LatestBtn({ handleSort, sortOrder }) {
 
   return (
     <>
-      <Select
-        styles={SelectCustomStyles}
+      <StyledReactSelect
+        classNamePrefix={'Select'}
         isSearchable={false}
         value={sortOrder}
         onChange={handleSort}

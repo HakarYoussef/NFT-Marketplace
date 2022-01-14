@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 *{
@@ -12,7 +12,8 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body{
-    background-color: ${({ theme }) => theme.colors.body};
+    background-color: ${(props) => props.theme.bg};
+    height: 100%;
     
 }
 
@@ -27,10 +28,16 @@ body::-webkit-scrollbar-track {
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${(props) => props.theme.primary};
   border-radius: 5px;
 }
 
-`;
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
 
-export default GlobalStyles;
+`;

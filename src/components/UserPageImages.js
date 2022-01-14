@@ -5,13 +5,34 @@ import {
 } from './styles/UserPage.style';
 import CardMedia from '@mui/material/CardMedia';
 import { Tabs, Tab, Box } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { makeStyles } from '@mui/styles';
 
-function UserPageImages({ img }) {
+const useStyles = makeStyles({
+  media: {
+    borderRadius: '3px',
+    transition: 'transform 0.2s ease',
+
+    '&:hover': {
+      transform: 'scale(1.03)',
+    },
+  },
+});
+
+function UserPageImages({ img, id }) {
+  const classes = useStyles();
   return (
     <>
       <UserPageImagesContainer>
         <UserPageImageWrapper>
-          <CardMedia height="300" component="img" src={img} />
+          <Link to={`/${id}`}>
+            <CardMedia
+              className={classes.media}
+              height="300"
+              component="img"
+              src={img}
+            />
+          </Link>
         </UserPageImageWrapper>
       </UserPageImagesContainer>
     </>

@@ -40,30 +40,53 @@ function IndividualMarket(props) {
           .map((art) => {
             return art.creations.map((item) => {
               return (
-                <React.Fragment>
+                <>
                   <IndiviualMarketStyles>
-                    <Link
-                      to={`/${item.id}`}
-                      style={{
-                        cursor: 'default',
-                        textDecoration: 'none',
-                        color: 'inherit',
-                      }}
-                    >
-                      <SingleEditionCard
-                        key={item.id}
-                        creatorId={art.creatorId}
-                        title={item.title}
-                        priceTez={item.priceTez}
-                        priceUsd={item.priceUsd}
-                        avatar={art.avatar}
-                        img={item.img}
-                        edition={item.edition}
-                        editions={item.editions}
-                      />
-                    </Link>
+                    {item.editions > 1 ? (
+                      <Link
+                        to={`/${item.id}`}
+                        style={{
+                          cursor: 'default',
+                          textDecoration: 'none',
+                          color: 'inherit',
+                        }}
+                      >
+                        <MultipleCard
+                          key={item.id}
+                          creatorId={art.creatorId}
+                          title={item.title}
+                          priceTez={item.priceTez}
+                          priceUsd={item.priceUsd}
+                          avatar={art.avatar}
+                          img={item.img}
+                          edition={item.edition}
+                          editions={item.editions}
+                        />
+                      </Link>
+                    ) : (
+                      <Link
+                        to={`/${item.id}`}
+                        style={{
+                          cursor: 'default',
+                          textDecoration: 'none',
+                          color: 'inherit',
+                        }}
+                      >
+                        <SingleEditionCard
+                          key={item.id}
+                          creatorId={art.creatorId}
+                          title={item.title}
+                          priceTez={item.priceTez}
+                          priceUsd={item.priceUsd}
+                          avatar={art.avatar}
+                          img={item.img}
+                          edition={item.edition}
+                          editions={item.editions}
+                        />
+                      </Link>
+                    )}
                   </IndiviualMarketStyles>
-                </React.Fragment>
+                </>
               );
             });
           })

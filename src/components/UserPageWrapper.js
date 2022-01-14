@@ -5,7 +5,9 @@ import { loadArts } from './actions/artAction';
 import LoadingSpinner from './LoadingSpinner';
 import {
   UserPageImgContainer,
+  UserPageSeeMore,
   UserPageWrapperStyle,
+  UserRightSide,
 } from './styles/UserPage.style';
 import UserPage from './UserPage';
 import UserPageImages from './UserPageImages';
@@ -53,19 +55,33 @@ const UserPageWrapper = (props) => {
                 creationsNum={art.creations.length}
                 bio={art.bio}
               />
-              <UserProfileTabs
-                created={
-                  <UserPageImgContainer>
-                    {art.creations.slice(0, 4).map((item) => {
-                      return <UserPageImages key={item.id} img={item.img} />;
-                    })}
-                  </UserPageImgContainer>
-                }
-                collected={<CollectedArts />}
-              />
-              <Link to={`/${art.creatorId}/marketplace`}>
-                See more from @{art.creatorId}
-              </Link>
+              <UserRightSide>
+                <UserProfileTabs
+                  created={
+                    <UserPageImgContainer>
+                      {art.creations.slice(0, 4).map((item) => {
+                        return (
+                          <UserPageImages
+                            key={item.id}
+                            img={item.img}
+                            id={item.id}
+                          />
+                        );
+                      })}
+                    </UserPageImgContainer>
+                  }
+                  collected={<CollectedArts />}
+                />
+                <Link
+                  style={{ textDecoration: 'none' }}
+                  to={`/${art.creatorId}/marketplace`}
+                >
+                  <UserPageSeeMore>
+                    <h4> See more from</h4>
+                    <p>@{art.creatorId}</p>
+                  </UserPageSeeMore>
+                </Link>
+              </UserRightSide>
             </UserPageWrapperStyle>
           ))
       )}

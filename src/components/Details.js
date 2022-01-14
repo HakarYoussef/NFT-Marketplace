@@ -1,9 +1,5 @@
 import React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import {
   CreatorName,
   CreatorWrapper,
@@ -16,7 +12,10 @@ import {
   OwnerWrapper,
   PriceWrapper,
   RightSideWrapper,
+  CollectionStyles,
+  ViewsStyles,
 } from './styles/Explorer.style';
+import { Link } from 'react-router-dom';
 
 const Details = ({
   title,
@@ -54,7 +53,12 @@ const Details = ({
           <CreatorWrapper>
             <img src={avatar} alt="avatar" />
             <CreatorName>
-              <h4>@{creatorId}</h4>
+              <Link
+                style={{ textDecoration: 'none' }}
+                to={`/user/${creatorId}`}
+              >
+                <h4>@{creatorId}</h4>
+              </Link>
               <p>Creator</p>
             </CreatorName>
           </CreatorWrapper>
@@ -62,15 +66,23 @@ const Details = ({
           <OwnerWrapper>
             <img src={ownerAvatar} alt="avatar" />
             <OwnerName>
-              <h4>@{owner}</h4>
+              {' '}
+              <Link style={{ textDecoration: 'none' }} to={`/user/${owner}`}>
+                <h4>@{owner}</h4>
+              </Link>
               <p>Owner</p>
             </OwnerName>
           </OwnerWrapper>
           <hr />
-          <h4>{collection}</h4>
-          <p>Collection</p>
-          <h4>224</h4>
-          <p>Views</p>
+          <CollectionStyles>
+            <h4>{collection}</h4>
+            <p>Collection</p>
+          </CollectionStyles>
+
+          <ViewsStyles>
+            <h4>224</h4>
+            <p>Views</p>
+          </ViewsStyles>
         </RightSideWrapper>
       </DetailsStyles>
     </DetailsWrapper>

@@ -23,6 +23,9 @@ export default function UserProfileTab({ created, collected }) {
         color: '#00b7be',
       },
     },
+    tab: {
+      color: '#535660',
+    },
   });
 
   const classes = useStyles();
@@ -36,8 +39,8 @@ export default function UserProfileTab({ created, collected }) {
             aria-label="lab API tabs example"
             className={classes.tabs}
           >
-            <Tab label="Created" value="1" />
-            <Tab label="Collected" value="2" />
+            <Tab className={classes.tab} label="Created" value="1" />
+            <Tab className={classes.tab} label="Collected" value="2" />
           </TabList>
         </Box>
         <TabPanel sx={{ padding: '0', margin: ' 20px 0' }} value="1">

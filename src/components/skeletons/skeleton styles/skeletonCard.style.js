@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 export const SkeletonWrapper = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.header};
   padding: 10px 10px;
   height: 620px;
   border-radius: 5px;
@@ -13,7 +13,7 @@ export const SkeletonWrapper = styled.div`
 `;
 
 export const ImgSkeleton = styled.div`
-  background-color: #ddd;
+  background-color: ${(props) => props.theme.skeleton};
   width: 100%;
   height: 400px;
 `;
@@ -23,7 +23,7 @@ export const TitleSkeleton = styled.div`
   width: 30%;
   height: 20px;
   border-radius: 3px;
-  background-color: ${({ theme }) => theme.colors.skeleton};
+  background-color: ${(props) => props.theme.skeleton};
 `;
 
 export const FirstBlockSkeleton = styled.div`
@@ -39,7 +39,7 @@ export const PriceTitleSkeleton = styled.div`
   width: 60px;
   height: 12px;
   border-radius: 3px;
-  background-color: ${({ theme }) => theme.colors.skeleton};
+  background-color: ${(props) => props.theme.skeleton};
 `;
 
 export const PriceSkeleton = styled.div`
@@ -47,7 +47,7 @@ export const PriceSkeleton = styled.div`
   width: 75px;
   height: 15px;
   border-radius: 3px;
-  background-color: ${({ theme }) => theme.colors.skeleton};
+  background-color: ${(props) => props.theme.skeleton};
 `;
 
 export const CardEditionSkeleton = styled.div`
@@ -60,7 +60,7 @@ export const EditionTitleSkeleton = styled.div`
   width: 75px;
   height: 12px;
   border-radius: 3px;
-  background-color: ${({ theme }) => theme.colors.skeleton};
+  background-color: ${(props) => props.theme.skeleton};
 `;
 
 export const EditionSkeleton = styled.div`
@@ -68,7 +68,7 @@ export const EditionSkeleton = styled.div`
   width: 90px;
   height: 15px;
   border-radius: 3px;
-  background-color: ${({ theme }) => theme.colors.skeleton};
+  background-color: ${(props) => props.theme.skeleton};
 `;
 
 export const SecondBlockSkeleton = styled.div`
@@ -88,7 +88,7 @@ export const CardCreatorNameSkeleton = styled.div`
   width: 90px;
   height: 20px;
   border-radius: 3px;
-  background-color: ${({ theme }) => theme.colors.skeleton};
+  background-color: ${(props) => props.theme.skeleton};
 `;
 
 export const CardCreatorImageSkeleton = styled.div`
@@ -97,7 +97,7 @@ export const CardCreatorImageSkeleton = styled.div`
   border-radius: 50%;
   margin-right: 10px;
 
-  background-color: ${({ theme }) => theme.colors.skeleton};
+  background-color: ${(props) => props.theme.skeleton};
 `;
 
 export const BidButton = styled.div`
@@ -105,7 +105,7 @@ export const BidButton = styled.div`
   width: 120px;
   height: 40px;
   border-radius: 3px;
-  background-color: ${({ theme }) => theme.colors.skeleton};
+  background-color: ${(props) => props.theme.skeleton};
 `;
 
 /* animation effects */
@@ -140,9 +140,7 @@ export const ShimmerStyle = styled.div`
   height: 100%;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0)
+    ${(props) => props.theme.skeletonGredient}
   );
   transform: skewX(0deg);
 `;

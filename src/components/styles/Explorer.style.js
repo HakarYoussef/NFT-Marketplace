@@ -6,6 +6,66 @@ import {
   MdOutlineKeyboardArrowUp,
 } from 'react-icons/md';
 
+import ReactSelect from 'react-select';
+
+export const StyledReactSelect = styled(ReactSelect)`
+  .Select__control {
+    background: ${(props) => props.theme.input};
+    border: transparent;
+    color: ${(props) => props.theme.text};
+    margin-left: 20px;
+    padding: 0 20px;
+    :hover {
+      box-shadow: 0 0 0 2px ${(props) => props.theme.primary};
+    }
+  }
+
+  .Select__indicator-separator {
+    display: none;
+  }
+  .Select__dropdown-indicator {
+    color: inherit;
+    :hover {
+      color: inherit;
+    }
+  }
+  .Select__control--menu-is-open {
+    .Select__dropdown-indicator {
+      transition: all 0.3s ease;
+      content: 's';
+      transform: rotate(180deg);
+    }
+  }
+
+  .Select__single-value {
+    content: 'something';
+    color: ${(props) => props.theme.text};
+  }
+  .Select__menu {
+    border-radius: 3px;
+    background: ${(props) => props.theme.input};
+    width: 100%;
+    padding: 10px;
+    color: ${(props) => props.theme.text};
+    margin-left: 20px;
+  }
+  .Select__menu-list {
+    padding: 0;
+  }
+  .Select__option {
+    border-radius: 3px;
+    color: ${(props) => props.theme.text};
+    margin: 10px 0;
+  }
+
+  .Select__option--is-focused {
+    background: ${(props) => props.theme.body};
+  }
+  .Select__option--is-selected {
+    background: ${(props) => props.theme.primary};
+  }
+`;
+
 export const ExplorerStyles = styled.div`
   display: flex;
   justify-content: center;
@@ -14,7 +74,7 @@ export const ExplorerStyles = styled.div`
 `;
 
 export const ExplorerArtworksStyles = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.body};
   width: 100vw;
   text-align: center;
   border-radius: 5px;
@@ -49,13 +109,13 @@ export const LatestBtnStyles = styled.button`
   margin: 0 10px;
   border-radius: 3px;
   z-index: 20;
-  border: 2px solid ${({ theme }) => theme.colors.input};
-  font-size: ${({ theme }) => theme.fontSize};
+  border: 2px solid ${(props) => props.theme.input};
+  font-size: ${(props) => props.theme.fontSize};
   cursor: pointer;
 `;
 
 export const LatestIconDown = styled(MdOutlineKeyboardArrowDown)`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${(props) => props.theme.text};
   opacity: 0.6;
   margin: 0 10px;
   transition: all 0.3s ease-out;
@@ -63,8 +123,9 @@ export const LatestIconDown = styled(MdOutlineKeyboardArrowDown)`
 `;
 
 export const FilterBtnStyles = styled.button`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.input};
   height: 40px;
+  color: ${(props) => props.theme.text};
   display: flex;
   align-items: center;
   margin-left: 30px;
@@ -72,24 +133,24 @@ export const FilterBtnStyles = styled.button`
   z-index: 10;
   width: 160px;
   border-radius: 3px;
-  border: 2px solid ${({ theme }) => theme.colors.input};
-  font-size: ${({ theme }) => theme.fontSize};
+  border: 2px solid ${(props) => props.theme.input};
+  font-size: ${(props) => props.theme.fontSize};
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   &:hover {
-    box-shadow: 0 0 0 2px rgba(0, 183, 190, 0.2);
+    box-shadow: 0 0 0 2px ${(props) => props.theme.primary};
   }
 `;
 
 export const FilterIcon = styled(BiFilter)`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${(props) => props.theme.text};
   opacity: 0.6;
   stroke-width: 0.8px;
   margin: 0 10px;
 `;
 
 export const ExSearchStyles = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.body};
   width: 40%;
   /* z-index: 12; */
   position: absolute;
@@ -97,31 +158,32 @@ export const ExSearchStyles = styled.div`
   display: flex;
   align-items: center;
   border-radius: 3px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 6%);
+  box-shadow: 0px 8px 20px ${(props) => props.theme.bShadow};
   margin: 40px;
 
   input {
     margin-left: 10px;
     width: 100%;
     outline: none;
+    color: ${(props) => props.theme.text};
     border: none;
-    background-color: #fff;
+    background-color: ${(props) => props.theme.body};
     &::placeholder {
-      color: ${({ theme }) => theme.colors.text};
+      color: ${(props) => props.theme.text};
       opacity: 0.6;
     }
   }
 `;
 export const ExSearchIcon = styled(BsSearch)`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${(props) => props.theme.text};
   opacity: 0.6;
   stroke-width: 0.8px;
 `;
 
 export const LatestDropDownStyles = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.input};
   z-index: 11;
-  border: 2px solid ${({ theme }) => theme.colors.input};
+  border: 2px solid ${(props) => props.theme.input};
   margin: 30px -240px;
   padding: 10px 32.5px;
   position: absolute;
@@ -143,14 +205,14 @@ export const LatestDropDownStyles = styled.div`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
 `;
 
 export const FilterListStyle = styled.div`
   display: flex;
-  width: 95vw;
-  background: #fff;
+  width: 96vw;
+  background: ${(props) => props.theme.input};
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
@@ -160,11 +222,11 @@ export const FilterListStyle = styled.div`
   position: absolute;
 
   p {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
     margin: 10px 30px;
   }
   h5 {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${(props) => props.theme.primary};
     margin: 20px 30px;
     cursor: pointer;
   }
@@ -186,8 +248,9 @@ export const FilterTagStyles = styled.div`
 `;
 
 export const FilterTagBtnStyle = styled.button`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.input};
   height: 40px;
+  color: ${(props) => props.theme.text};
   display: flex;
   width: auto;
   align-items: center;
@@ -195,14 +258,14 @@ export const FilterTagBtnStyle = styled.button`
   padding: 0 25px;
   border-radius: 100px;
   margin: 0 10px;
-  border: 2px solid ${({ theme }) => theme.colors.input};
-  font-size: ${({ theme }) => theme.fontSize};
+  border: 2px solid ${(props) => props.theme.border};
+  font-size: ${(props) => props.theme.fontSize};
   cursor: pointer;
 `;
 
 export const SingleCardStyles = styled.div`
-  background-color: #fff;
-  border: solid 2px ${({ theme }) => theme.colors.input};
+  background-color: ${(props) => props.theme.input};
+  border: solid 2px ${(props) => props.theme.input};
   text-align: start;
   padding: 10px 10px;
   height: 620px;
@@ -217,16 +280,16 @@ export const SingleCardStyles = styled.div`
   }
   &:hover {
     transform: translateY(-10px) scale(1.01);
-    box-shadow: 0 8px 20px rgba(0, 183, 190, 20%);
+    box-shadow: 0 8px 20px ${(props) => props.theme.bShadow};
   }
   h3 {
     margin-top: 10px;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
 `;
 export const MultipleCardStyles = styled.div`
-  background-color: #fff;
-  border: solid 2px ${({ theme }) => theme.colors.input};
+  background-color: ${(props) => props.theme.input};
+  border: solid 2px ${(props) => props.theme.input};
   text-align: start;
   padding: 10px 10px;
   height: 620px;
@@ -234,19 +297,20 @@ export const MultipleCardStyles = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 26.8rem));
   transition: all 0.18s ease-in-out;
-  box-shadow: rgba(250, 250, 250, 0.5) 0px 5px,
-    rgba(250, 250, 250, 0.3) 0px 10px, rgba(0, 183, 190, 0.8) 0px 13.5px;
+  box-shadow: ${(props) => props.theme.bShadow} 0px 5px,
+    ${(props) => props.theme.bShadow} 0px 10px,
+    ${(props) => props.theme.bShadow} 0px 13.5px;
   img {
     width: 100%;
     cursor: pointer;
   }
   &:hover {
     transform: translateY(-10px) scale(1.01);
-    box-shadow: 0 8px 20px rgba(0, 183, 190, 20%);
+    box-shadow: 0 8px 20px ${(props) => props.theme.bShadow};
   }
   h3 {
     margin-top: 10px;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
 `;
 export const FirstBlock = styled.div`
@@ -264,7 +328,7 @@ export const SecondBlock = styled.div`
 export const CardPrice = styled.div`
   p {
     margin: 15px 0;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
 `;
 export const CardEdition = styled.div`
@@ -273,13 +337,13 @@ export const CardEdition = styled.div`
   align-items: flex-end;
   p {
     margin: 10px 0;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
 `;
 export const CardCreator = styled.div`
   /* margin: 10px 0; */
   p {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
 `;
 export const CardCreatorName = styled.div`
@@ -292,7 +356,7 @@ export const CardCreatorName = styled.div`
     margin-right: 10px;
   }
   p {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${(props) => props.theme.primary};
   }
 `;
 export const CardBtn = styled.div``;
@@ -318,16 +382,17 @@ export const LeftSideWrapper = styled.div`
   h3 {
     font-family: 'Fugaz One', cursive;
     font-size: 1.6rem;
+    color: ${(props) => props.theme.text};
   }
   h4:nth-of-type(2) {
     max-width: 300px;
     font-weight: 400;
     text-align: justify;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
     margin-bottom: 100px;
   }
   h4:nth-of-type(1) {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
 
   hr {
@@ -352,24 +417,13 @@ export const ImageWrapper = styled.div`
 export const RightSideWrapper = styled.div`
   margin-right: 20px;
 
-  h4 {
-    color: ${({ theme }) => theme.colors.text};
-    font-size: ${({ theme }) => theme.fontSize};
-    margin-bottom: 10px;
-  }
-
   hr {
     display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 2em 0;
+    margin: 1.5em 0;
     padding: 0;
-  }
-  p {
-    color: ${({ theme }) => theme.colors.text};
-    opacity: 0.7;
-    font-size: ${({ theme }) => theme.fontSizeSmall};
   }
 `;
 
@@ -382,7 +436,7 @@ export const PriceWrapper = styled.div`
     font-size: 1.3em;
   }
   p {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
 `;
 
@@ -391,10 +445,10 @@ export const DetailsBtn = styled.button`
   border-radius: 3px;
   width: 100%;
   padding: 10px 40px;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${(props) => props.theme.primary};
   font-weight: 700;
-  font-size: ${({ theme }) => theme.fontSize};
-  color: #fff;
+  font-size: ${(props) => props.theme.fontSize};
+  color: ${(props) => props.theme.input};
   cursor: pointer;
   border: solid 1px #00b7be;
 `;
@@ -410,7 +464,17 @@ export const CreatorWrapper = styled.div`
     margin-right: 10px;
   }
 `;
-export const CreatorName = styled.div``;
+export const CreatorName = styled.div`
+  h4 {
+    color: #00b7be;
+  }
+  p {
+    margin-top: 5px;
+    color: ${(props) => props.theme.text};
+    opacity: 0.7;
+    font-size: ${(props) => props.theme.fontSizeSmall};
+  }
+`;
 
 export const OwnerWrapper = styled.div`
   display: flex;
@@ -423,4 +487,43 @@ export const OwnerWrapper = styled.div`
     margin-right: 10px;
   }
 `;
-export const OwnerName = styled.div``;
+export const OwnerName = styled.div`
+  h4 {
+    color: #00b7be;
+  }
+  p {
+    margin-top: 5px;
+    color: ${(props) => props.theme.text};
+    opacity: 0.7;
+    font-size: ${(props) => props.theme.fontSizeSmall};
+  }
+`;
+
+export const CollectionStyles = styled.div`
+  h4 {
+    color: ${(props) => props.theme.text};
+    font-size: ${(props) => props.theme.fontSize};
+    margin-bottom: 10px;
+  }
+  p {
+    color: ${(props) => props.theme.text};
+    opacity: 0.7;
+    font-size: ${(props) => props.theme.fontSizeSmall};
+  }
+`;
+
+export const ViewsStyles = styled.div`
+  h4 {
+    color: ${(props) => props.theme.text};
+    font-size: ${(props) => props.theme.fontSize};
+    margin-top: 10px;
+    
+  }
+  }
+  p {
+    margin-top: 5px;
+    color: ${(props) => props.theme.text};
+    opacity: 0.7;
+    font-size: ${(props) => props.theme.fontSizeSmall};
+  }
+`;

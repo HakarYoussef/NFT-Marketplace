@@ -11,7 +11,7 @@ export const RecentArtWrapper = styled.div`
 `;
 
 export const TitleWrapper = styled.div`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${(props) => props.theme.text};
   text-align: center;
   margin: 10px 0 25px 0;
 `;

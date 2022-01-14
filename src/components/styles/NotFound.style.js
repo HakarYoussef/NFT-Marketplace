@@ -11,7 +11,7 @@ export const NotFoundWrapper = styled.div`
   }
   h3 {
     margin-top: 20px;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${(props) => props.theme.text};
   }
   p {
     margin-top: 20px;
