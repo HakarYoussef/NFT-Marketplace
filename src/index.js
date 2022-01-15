@@ -4,13 +4,13 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './components/store/store';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <HashRouter base="/">
+  <BrowserRouter basename="/NFT-Marketplace1">
     <Provider store={store}>
       <App />
     </Provider>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
