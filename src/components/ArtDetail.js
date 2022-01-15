@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { useParams, useNavigate } from 'react-router';
 import { loadArts } from './actions/artAction';
 import Details from './Details';
+import LoadingSpinner from './LoadingSpinner';
 
 const ArtDetail = (props) => {
   const [artworks, setArtworks] = useState(props.artworks);
@@ -16,15 +17,17 @@ const ArtDetail = (props) => {
 
   useEffect(() => {
     if (props.artworks.length > 0) {
-      setArtworks(props.artworks);
-      setIsLoading(false);
+      setTimeout(() => {
+        setArtworks(props.artworks);
+        setIsLoading(false);
+      }, 500);
     }
   }, [props.artworks]);
 
   return (
     <>
       {isLoading ? (
-        <div>Loading...</div>
+        <LoadingSpinner />
       ) : (
         artworks &&
         artworks.map((art) => {
