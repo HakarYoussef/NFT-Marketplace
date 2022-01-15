@@ -1,0 +1,128 @@
+[
+  {
+    "creatorName": "Leo Penry",
+    "creatorId": "leopenry",
+    "location": "USA",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    "creationsNum": "",
+    "collectionNum": "0",
+    "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+    "creations": [
+      {
+        "id": "0",
+        "img": "https://images.unsplash.com/photo-1638913970675-b5ec36292665?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",
+        "title": "Paradox",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "lorenz2010",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/2.jpg",
+        "priceTez": 15,
+        "priceUsd": 187,
+        "edition": 1,
+        "editions": 2,
+        "collection": "My Collection"
+      },
+      {
+        "id": "1",
+        "img": "https://images.unsplash.com/photo-1638913974071-ad0045d13691?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
+        "title": "Pop",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "lorenz2010",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/2.jpg",
+        "priceTez": 2,
+        "priceUsd": 12,
+        "edition": 1,
+        "editions": 1,
+        "collection": "My Collection"
+      },
+      {
+        "id": "2",
+        "img": "https://images.unsplash.com/photo-1638913976954-8f7b612867c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        "title": "Maistro",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "lorenz2010",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/2.jpg",
+        "priceTez": 8,
+        "priceUsd": 66,
+        "edition": 1,
+        "editions": 4,
+        "collection": "My Collection"
+      },
+      {
+        "id": "6",
+        "img": "https://images.unsplash.com/photo-1638913971789-667874197280?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        "title": "Bell",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "lorenz2010",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/2.jpg",
+        "priceTez": 16,
+        "priceUsd": 87,
+        "edition": 1,
+        "editions": 1,
+        "collection": "My Collection"
+      },
+      {
+        "id": "7",
+        "img": "https://images.unsplash.com/photo-1638913971251-832d29947de6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+        "title": "Maistro",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "lorenz2010",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/2.jpg",
+        "priceTez": 2,
+        "priceUsd": 12,
+        "edition": 1,
+        "editions": 10,
+        "collection": "My Collection"
+      }
+    ]
+  },
+  {
+    "creatorName": "Lorenz",
+    "creatorId": "lorenz2010",
+    "location": "Brazil",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    "creationsNum": "4",
+    "collectionNum": "0",
+    "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
+    "creations": [
+      {
+        "id": "3",
+        "img": "https://images.unsplash.com/photo-1638913971873-bcef634bdcd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        "title": "Space",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "leopenry",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/1.jpg",
+        "priceTez": 50,
+        "priceUsd": 400,
+        "edition": 1,
+        "editions": 2,
+        "collection": "My Collection"
+      },
+      {
+        "id": "4",
+        "img": "https://images.unsplash.com/photo-1638913976381-5b8ed66c36d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        "title": "Rain",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "leopenry",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/1.jpg",
+        "priceTez": 8,
+        "priceUsd": 65,
+        "edition": 1,
+        "editions": 1,
+        "collection": "My Collection"
+      },
+      {
+        "id": "5",
+        "img": "https://images.unsplash.com/photo-1638913975386-d61f0ec6500d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
+        "title": "BOOM",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "owner": "leopenry",
+        "ownerAvatar": "https://randomuser.me/api/portraits/men/1.jpg",
+        "priceTez": 8,
+        "priceUsd": 168,
+        "edition": 1,
+        "editions": 5,
+        "collection": "My Collection"
+      }
+    ]
+  }
+]
